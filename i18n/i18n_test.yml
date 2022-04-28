@@ -1,0 +1,36 @@
+# Example i18n source file.
+
+# Fallback language if no requested language key exists in translation
+default_lang: en
+
+# List of translations
+translations:
+
+  # Key may be just a key...
+  test_key_1:
+    en:
+      text: "Test English text 1"
+    ru:
+      text: "Тестовый текст на русском 1"
+
+  # ...or a default language text
+  "Test English text 2":
+    ru:
+      text: "Тестовый текст на русском 2"
+  "Test English text 3":
+    en:
+      text: "Test English text 3 (override)"
+    ru:
+      text: "Тестовый текст на русском 3"
+
+  test_key_2_vars:
+    en:
+      text: "Test English text 4, with var: {{.Test}}"
+    ru:
+      text: "Тестовый текст на русском 4 с переменной: {{.Test}}"
+  test_key_3:
+    en:
+      text: "Test English text 5"
+  invalid_tpl:
+    en:
+      text: "Invalid template {{.}"
